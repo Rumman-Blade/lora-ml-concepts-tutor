@@ -1,0 +1,21 @@
+# Model
+model_name: "gpt2"  # swap to "TinyLlama/TinyLlama-1.1B-Chat-v1.0" on Kaggle
+
+# Data
+data_path: "data/train.jsonl"
+max_length: 128
+
+# LoRA settings
+lora_r: 8           # rank — how many trainable dimensions we inject
+lora_alpha: 16      # scaling factor (rule of thumb: 2x lora_r)
+lora_dropout: 0.1
+target_modules:     # which layers we inject LoRA into
+  - "c_attn"        # GPT-2 specific — attention weights
+
+# Training
+output_dir: "outputs/"
+num_epochs: 3
+batch_size: 2
+learning_rate: 3e-4
+save_steps: 50
+logging_steps: 10
