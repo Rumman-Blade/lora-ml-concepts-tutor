@@ -1,0 +1,22 @@
+# virtual environment
+venv/
+
+# model outputs and checkpoints (too large for git)
+outputs/
+*.bin
+*.safetensors
+*.pt
+*.pth
+
+# python cache
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# env files
+.env
