@@ -16,6 +16,6 @@ target_modules:     # which layers we inject LoRA into
 output_dir: "outputs/"
 num_epochs: 3
 batch_size: 2
-learning_rate: 3e-4
+learning_rate: 0.0003
 save_steps: 50
 logging_steps: 10
